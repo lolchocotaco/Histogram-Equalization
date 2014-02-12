@@ -22,7 +22,14 @@ public class HistogramClient {
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             BufferedImage bimg = ImageIO.read(new File(args[2]));
             System.out.println("Image read in");
-            ImageIO.write(bimg, "JPG", out);
+            //ImageIO.write(bimg, "JPG", out);
+
+            ByteArrayOutputStream byteArrayO = new ByteArrayOutputStream();
+            ImageIO.write(bimg,"JPG",byteArrayO);
+            byte [] byteArray = byteArrayO.toByteArray();
+            out.writeInt(byteArray.length);
+            out.write(byteArray);
+            //out.flush();
             System.out.println("Image sent over socket");
             BufferedImage result = ImageIO.read(in);
             System.out.println("Result received");
