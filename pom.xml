@@ -30,7 +30,7 @@
  <build>
   <plugins>
 
-    <plugin>
+  <!--  <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
@@ -61,8 +61,8 @@
             </execution>
         </executions>
     </plugin>
-
-      <!--
+-->
+      
         <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -80,11 +80,11 @@
               <argument>-Dlog4j.debug</argument>
               <argument>-classpath</argument>
                 <classpath/>
-                <argument>edu.cooper.ece465.KKMultiServer</argument>
-                   <argument>1992</argument>
+                <!-- <argument>edu.cooper.ece465.KKMultiServer</argument>
+                   <argument>1992</argument> -->
           </arguments>
         </configuration>
-      </plugin>   -->
+      </plugin>   
 
 
 
