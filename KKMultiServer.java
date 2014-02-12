@@ -14,6 +14,7 @@ public class KKMultiServer {
 
         try (ServerSocket serverSocket = new ServerSocket(portNumber)) {
             while (listening) {
+                System.out.println("New Connection");
                 new ImageThread(serverSocket.accept()).start();
             }
         } catch (IOException e) {

@@ -11,21 +11,15 @@ import javax.imageio.ImageIO;
  * Author: Bostjan Cigan (http://zerocool.is-a-geek.net)
  *
  */
- 
+
 public class HistogramEQ {
- 
+
     private static BufferedImage original, equalized;
- 
-    public static void main(String[] args) throws IOException {
- 
-        File original_f = new File(args[0]+".jpg");
-        String output_f = args[1];
-        original = ImageIO.read(original_f);
-        equalized = histogramEqualization(original);
-        writeImage(output_f);
- 
+
+    public static BufferedImage computeHistogramEQ(BufferedImage im){
+        return histogramEqualization(im);
     }
- 
+
     private static void writeImage(String output) throws IOException {
         File file = new File(output+".jpg");
         ImageIO.write(equalized, "jpg", file);
