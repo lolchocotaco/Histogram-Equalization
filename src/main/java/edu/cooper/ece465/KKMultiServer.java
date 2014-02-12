@@ -1,5 +1,3 @@
-package edu.cooper.ece465;
-
 import java.net.*;
 import java.io.*;
 

@@ -1,5 +1,3 @@
-package edu.cooper.ece465;
-
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
